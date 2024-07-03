@@ -1,0 +1,139 @@
+*{
+    padding:0;
+    margin: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-image:linear-gradient(#380036,#0cbaba);
+}
+
+.container{
+max-width: 650px;
+padding: 28PX;
+border-radius: 10PX;
+overflow: hidden;
+background: rgba(0, 0,0,0.2);
+box-shadow:0 15px 20px  rgba(0, 0,0, 0.6) ;
+}
+
+h2{
+    font-size:26PX;
+    font-weight: bold;
+    text-align: left;
+    color: #fff;
+    padding-bottom: 8px;
+    border-bottom: 1PX solid silver;
+
+}
+
+.content{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20PX 0;
+}
+
+.input-box{
+    display: flex;
+    flex-wrap: wrap;
+    width: 50%;
+    padding-bottom: 15PX;
+}
+
+.input-box.input-box:nth-child(2n){
+    justify-content: end;
+
+}
+
+.input-box label, .gender-title{
+    width: 95%;
+    color: #fff;
+    font-weight: bold;
+    margin: 5PX 0;
+}
+
+.gender-title{
+    font-size: 16px;
+}
+
+.input-box input{
+    height: 40px;
+    width: 95%;
+    padding: 0 10px;
+    border-radius: 5PX ;
+    border:1PX solid #ccc;
+    outline:none ;
+}
+
+.input-box input:is(:focus,:valid){
+    box-shadow:0 3px 6px rgba(0,0,0,0.2) ;
+}
+
+.gender-category label{
+padding: 0 20px 0 5px ;
+font-size: 14px;
+}
+
+.gender-category{
+    color:gainsboro ;
+}
+
+.gender-category label, .gender-category input{
+    cursor: pointer;
+}
+
+.alerte p{
+    font-size: 14px;
+    font-style: italic;
+    color: #fff;
+    line-height: 1.5;
+}
+
+.alerte a{
+    font-weight:bold ;
+    text-decoration: none;
+    color: skyblue;
+}
+.alerte a:hover{
+    font-weight:bold;
+    text-decoration: underline;
+    color: #380036;
+}
+
+.button-container{
+    margin: 15PX 0;
+}
+
+.button-container button{
+    width: 100%;
+    margin-top:10PX ;
+    padding: 10px;
+    display: block;
+    font-size: 20px;
+    color:#aa076b,#61045f ;
+    border-radius: 5px;
+    background-image: #aa076b,#61045f;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.button:hover{
+    color: #aa076b,#61045f ;
+}
+
+button:hover{
+    animation:animation1s infinite;
+}
+    
+@keyframes animation{
+    button{
+        color:#aa076b,#61045f;
+        transform:scale(23);
+    }
+}

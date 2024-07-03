@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <title>formulaire1</title>
+</head>
+<body>
+
+    <div class="container">
+        <form action="recup_donnees.php" methode="post">
+            <h2>S'INSCRIRE</h2>
+            <div class="content">
+                <div class="input-box">
+                    <label for="name">NOM</label>
+                    <input type="text" placeholder="entrez  tous votre nom ex:roxane" name="name" required>
+                </div>
+
+                <div class="input-box">
+                    <label for="username">PRENOM</label>
+                    <input type="text" placeholder="entrez tous votre prenom ex:elkast" name="username" required>
+                </div>
+
+                <div class="input-box">
+                    <label for="email">EMAIL</label>
+                    <input type="email" placeholder="entrez votre  adress email ex:kadiyasmine@gmail.com " name="email" required>
+                </div>
+
+               <div class="input-box">
+                    <label for="phone">TELEPHONE</label>
+                    <input type="phone" placeholder=" entrez votre numero de telephone ex:+22512435678" name="phone" required>
+                </div>
+
+                <div class="input-box">
+                    <label for="password">MOT_DE_PASSE</label>
+                    <input type="password" placeholder="entrez votre nouveaumot de passe" name="password" required>
+                </div>
+
+                <div class="input-box">
+                    <label for="confirm-password">CONFIRM_MOT_DE_PASSE</label>
+                    <input type="password" placeholder="confirme ton mot de passe" name="confirm-password" required>
+                </div>
+                <span type="radio" class="gender-title">GENRE</span>
+
+                <div class="gender-categor">
+                    <input type="radio" name="gender" id="male">
+                    <label for="male">homme</label>
+
+                    <input type="radio" name="gender" id="female">
+                    <label for="female">femme</label>
+
+                    <input type="radio" name="gender" id="other">
+                    <label for="other">autres</label>
+                </div>
+
+            </div>
+            <div class="alert">
+                <p> en cliquant ici vous accepter tous <a href="#">les termes </a>et<a href="#">conditions</a> ainsi que le,<a href="#">private police</a> et <a href="#">cookie police</a>.<br>vous pourrai recevoisdes sms de notification et vous sortir a tous moment.</p>
+            </div>
+            <div class="button-container">
+                <button>s'enregister</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

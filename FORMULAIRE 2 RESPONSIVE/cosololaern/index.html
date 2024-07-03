@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Streamlit App</title>
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+
+*{
+  font-family: "Ubuntu", Sans-serif;
+}
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden;
+            background-color: #1e1e1e; 
+            font-family: 'Ubuntu', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #preloader {
+            text-align: center;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+        }
+        .emoji {
+            font-size: 5em;
+            animation: blink 1s infinite;
+        }
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0; }
+        }
+        #loading-text {
+            font-size: 2.5em;
+            margin-top: 30px;
+            letter-spacing: .5px;
+          color: #333;
+          font-weight: 48px;
+          text-shadow: 0 0 150px #0ff,
+                       0 0  250px #0ff,
+                       0 0  500px #0ff,
+                       0 0  1000px #0ff,
+                       0 0  1500px #0ff,
+                       inset 0 0 500px #0ff;
+          background: linear-gradient(45deg, #2f68b7, #1d93b6, #de0fe6, #f27d0f);
+          background-size: 200% 200%;
+          -webkit-background-clip: text;
+         -webkit-text-stroke: 1px transparent;    
+        }
+        iframe {
+            width: 100vw;
+            height: 100vh;
+            border: none;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="preloader">
+        <div class="emoji">😴</div>
+        <div id="loading-text">Loading the app, <br>wait for some time</div>
+    </div>
+
+    <iframe id="app-frame" src="https://wiki-stream-ai.streamlit.app/?embed=true"></iframe>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var preloader = document.getElementById("preloader");
+            var appFrame = document.getElementById("app-frame");
+
+            setTimeout(function() {
+                preloader.style.display = "none";
+                appFrame.style.display = "block";
+            }, 3000);
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscription et Connexion Étudiant</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="./OIG..jpeg">
+</head>
+<body>
+    <div class="container">
+        <div class="tabs">
+            <button class="tab active" data-tab="inscription"  href="./formulaire d' enregistrement SEO.html">S'inscrire</button>
+            <button class="tab" data-tab="connexion">Se connecter</button>
+        </div>
+
+        <form id="inscription-form" class="form active">
+            <h1>Formulaire d'inscription étudiant</h1>
+            <!-- Les champs du formulaire d'inscription restent les mêmes -->
+            <!-- ... -->
+            <button type="submit" href="./formulaire d' enregistrement SEO.html">S'inscrire</button>
+        </form>
+
+        <form id="connexion-form" class="form">
+            <h1>Connexion étudiant</h1>
+            <div class="form-group">
+                <label for="login-email">Adresse e-mail</label>
+                <input type="email" id="login-email" name="login-email" placeholder="Votre adresse e-mail" required>
+            </div>
+            <div class="form-group">
+                <label for="login-password">Mot de passe</label>
+                <input type="password" id="login-password" name="login-password" placeholder="Votre mot de passe" required>
+            </div>
+            <button type="submit" href="./connexion.html">Se connecter</button>
+            <p class="forgot-password"><a href="#">Mot de passe oublié ?</a></p>
+        </form>
+    </div>
+
+    <style>
+        /* Ajoutez ces styles à votre fichier CSS existant */
+
+.tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.tab {
+    background: none;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #555;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.tab.active {
+    color: #667eea;
+    border-bottom: 3px solid #667eea;
+}
+
+.form {
+    display: none;
+}
+
+.form.active {
+    display: block;
+}
+
+.forgot-password {
+    text-align: center;
+    margin-top: 15px;
+}
+
+/* Ajustez ces styles si nécessaire pour qu'ils correspondent à votre design */
+
+    </style>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+    const tabs = document.querySelectorAll('.tab');
+    const forms = document.querySelectorAll('.form');
+
+    tabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+            const target = tab.getAttribute('data-tab');
+
+            // Désactiver tous les onglets et formulaires
+            tabs.forEach(t => t.classList.remove('active'));
+            forms.forEach(f => f.classList.remove('active'));
+
+            // Activer l'onglet cliqué et le formulaire correspondant
+            tab.classList.add('active');
+            document.getElementById(`${target}-form`).classList.add('active');
+        });
+    });
+});
+
+    </script>
+</body>
+</html>
